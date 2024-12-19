@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In/Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="mx-auto w-11/12 xl:w-4/5 flex flex-col lg:flex-row justify-between">
+        <!-- Mobile View Buttons -->
+        <div class="w-full flex justify-around lg:hidden mb-4">
+            <button id="showSignIn" class="px-4 py-2 hover:text-gray-500">SIGN IN</button>
+            <button id="showRegister" class="px-4 py-2 hover:text-gray-500">REGISTER</button>
+        </div>
+
+        <!-- Sign In Section -->
+        <div id="signIn" class="lg:w-5/12 lg:block">
+            <h1 class="text-2xl font-bold text-gray-800 mb-10">SIGN IN</h1>
+            <form id="sign-form" class="space-y-10">
+                <div>
+                    <label for="sign-email" class="block text-sm text-gray-600 mb-1">Email Address</label>
+                    <input type="email" id="sign-email" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                </div>
+                <div>
+                    <label for="sign-password" class="block text-sm text-gray-600 mb-1">Password</label>
+                    <div class="relative">
+                        <input type="password" id="sign-password" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                        <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer" onclick="togglePassword('sign-password')">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0c0 5.523-4.477 10-10 10S1 17.523 1 12 5.477 2 11 2s10 4.477 10 10z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <button class="w-full bg-black text-white py-2 hover:bg-gray-800">Sign In</button>
+            </form>
+        </div>
+
+        <!-- Register Section -->
+        <div id="register" class="lg:w-5/12 lg:block hidden lg:block">
+            <h1 class="text-2xl font-bold text-gray-800 mb-10">REGISTER</h1>
+            <form id="register-form" class="space-y-8">
+                <div>
+                    <label for="reg-Fname" class="block text-sm text-gray-600 mb-1">First Name</label>
+                    <input type="text" id="reg-Fname" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                </div>
+                <div>
+                    <label for="reg-Lname" class="block text-sm text-gray-600 mb-1">Last Name</label>
+                    <input type="text" id="reg-Lname" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                </div>
+                <div>
+                    <label for="reg-email" class="block text-sm text-gray-600 mb-1">Email Address</label>
+                    <input type="email" id="reg-email" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                </div>
+                <div>
+                    <label for="reg-password" class="block text-sm text-gray-600 mb-1">Password</label>
+                    <div class="relative">
+                        <input type="password" id="reg-password" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                        <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer" onclick="togglePassword('reg-password')">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0c0 5.523-4.477 10-10 10S1 17.523 1 12 5.477 2 11 2s10 4.477 10 10z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <button class="w-full bg-black text-white py-2 hover:bg-gray-800">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="../src/sign-register.js"></script>
