@@ -1,0 +1,23 @@
+img{
+  display: block;
+  
+}
+
+.product_breif{
+  display: flex;
+  width: 30%;
+}
+
+/* .maindiv {
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  
+} */
+
+/* @media (max-width: 768px) {
+  .maindiv {
+    max-width: 90%; /* Adjust the maximum width for smaller screens */
+  } */
+}
+.products{
+  width: 100%;
+}
