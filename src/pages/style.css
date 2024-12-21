@@ -97,11 +97,11 @@ nav a {
 
 .nav-links li:hover {
     /* color: red; */
-    font-size: 18px;
-}
+    /* font-size: 18px;
+} */
 
 
-.nav-links li:hover .mega-box {
+/* .nav-links li:hover .mega-box {
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
@@ -117,7 +117,7 @@ nav a {
 .mega-box .row {
     background: white;
     margin-right: 20px;
-} */
+} */ */
 
 .btn img {
     width: 25px;
