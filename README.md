@@ -10,7 +10,39 @@ Frontend
 Frontend: 
 
 ## Directory Structure
-B41_WEB_031_Frontend-Force/ ├─ node_modules/ ├─ public/ │ ├─ style.css # Main CSS file ├─ src/ │ ├─ images/ # All images used in the project │ ├─ js/ │ │ ├─ bag.js # Logic for shopping bag │ │ ├─ classic_products.js │ │ ├─ kids_products.js │ │ ├─ men_products.js │ │ ├─ productDetails.js │ │ ├─ sign-register.js │ │ ├─ sports_products.js │ │ ├─ women_products.js │ ├─ pages/ │ │ ├─ bag.html # Bag page │ │ ├─ classic_products.html │ │ ├─ index.html # Homepage │ │ ├─ kid_products.html │ │ ├─ men_products.html │ │ ├─ product_details.html │ │ ├─ sign-register.html │ │ ├─ sports_products.html │ │ ├─ women_products.html │ ├─ styles/ │ │ ├─ home.css # Home page styling │ │ ├─ index.css # Index-specific styles ├─ package-lock.json ├─ package.json ├─ README.md ├─ tailwind.config.js # Tailwind configuration
+B41_WEB_031_Frontend-Force/
+├─ node_modules/
+├─ public/
+│  ├─ style.css          # Main CSS file
+├─ src/
+│  ├─ images/            # All images used in the project
+│  ├─ js/
+│  │  ├─ bag.js          # Logic for shopping bag
+│  │  ├─ classic_products.js
+│  │  ├─ kids_products.js
+│  │  ├─ men_products.js
+│  │  ├─ productDetails.js
+│  │  ├─ sign-register.js
+│  │  ├─ sports_products.js
+│  │  ├─ women_products.js
+│  ├─ pages/
+│  │  ├─ bag.html        # Bag page
+│  │  ├─ classic_products.html
+│  │  ├─ index.html      # Homepage
+│  │  ├─ kid_products.html
+│  │  ├─ men_products.html
+│  │  ├─ product_details.html
+│  │  ├─ sign-register.html
+│  │  ├─ sports_products.html
+│  │  ├─ women_products.html
+│  ├─ styles/
+│  │  ├─ home.css        # Home page styling
+│  │  ├─ index.css       # Index-specific styles
+├─ package-lock.json
+├─ package.json
+├─ README.md
+├─ tailwind.config.js    # Tailwind configuration
+
 
 
 
