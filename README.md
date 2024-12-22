@@ -7,17 +7,17 @@ The Reebok website clone is a dynamic e-commerce application designed to replica
 Frontend
 
 ## Deployed App
-Frontend: 
+Frontend: https://ecommerce-reebok-website.netlify.app/
 
 ## Directory Structure
 ```B41_WEB_031_Frontend-Force/
 ├─ node_modules/
 ├─ public/
-│  ├─ style.css          # Main CSS file
-├─ src/
-│  ├─ images/            # All images used in the project
+│  ├─ index.html
+│  ├─ style.css
+│  ├─ images/
 │  ├─ js/
-│  │  ├─ bag.js          # Logic for shopping bag
+│  │  ├─ bag.js
 │  │  ├─ classic_products.js
 │  │  ├─ kids_products.js
 │  │  ├─ men_products.js
@@ -26,9 +26,8 @@ Frontend:
 │  │  ├─ sports_products.js
 │  │  ├─ women_products.js
 │  ├─ pages/
-│  │  ├─ bag.html        # Bag page
+│  │  ├─ bag.html
 │  │  ├─ classic_products.html
-│  │  ├─ index.html      # Homepage
 │  │  ├─ kid_products.html
 │  │  ├─ men_products.html
 │  │  ├─ product_details.html
@@ -36,22 +35,17 @@ Frontend:
 │  │  ├─ sports_products.html
 │  │  ├─ women_products.html
 │  ├─ styles/
-│  │  ├─ home.css        # Home page styling
-│  │  ├─ index.css       # Index-specific styles
+│  │  ├─ home.css
+│  │  ├─ index.css
 ├─ package-lock.json
 ├─ package.json
 ├─ README.md
-├─ tailwind.config.js    # Tailwind configuration
+├─ tailwind.config.js
 ```
 
 
-
-
 ## Video Walkthrough of the Project
-Attach a short video walkthrough showcasing the dynamic features and flow (1-3 minutes).
-
-## Video Walkthrough of the Codebase
-Attach a short video walkthrough of the codebase explaining the structure and key features (1-5 minutes).
+https://youtu.be/3ciPYilfWZY
 
 ## Features
 1. **Dynamic Product Pages**:
@@ -104,8 +98,8 @@ Open index.html to view the homepage.
 ## Credentials
 You can use the following test credentials to log in:
 
-Email: testuser@example.com
-Password: password123
+Email: palveprashant526@gmail.com
+Password: 123456
 
 ## APIs Used
 - Firebase API for:
@@ -118,4 +112,8 @@ Database (fetching and storing product, cart, and order data).
 - Firebase: For authentication and real-time database.
 
 ## Screenshots
-Include relevant screenshots of the homepage, product pages, bag, and checkout flow.
+
+## Screenshot
+
+![Homepage Screenshot](public/images/homescreen.png)
+![Women Product Page Screenshot](public/images/productscreen.png)

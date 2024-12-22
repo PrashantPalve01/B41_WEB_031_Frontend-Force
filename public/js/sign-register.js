@@ -123,7 +123,7 @@ function signIn(event) {
                         email.value = "";
                         password.value = "";
 
-                        window.location.href = "index.html";
+                        window.location.href = "../index.html";
                     })
                     .catch((err) => console.error("Error fetching user data:", err));
             } else {
