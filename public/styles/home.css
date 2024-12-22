@@ -191,6 +191,9 @@ video {
 .banner {
     position: relative;
 }
+.banner img{
+    width: 100%;
+}
 
 .side-text {
     position: absolute;
