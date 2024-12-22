@@ -10,7 +10,7 @@ Frontend
 Frontend: 
 
 ## Directory Structure
-B41_WEB_031_Frontend-Force/
+```B41_WEB_031_Frontend-Force/
 ├─ node_modules/
 ├─ public/
 │  ├─ style.css          # Main CSS file
@@ -41,7 +41,7 @@ B41_WEB_031_Frontend-Force/
 ├─ package-lock.json
 ├─ package.json
 ├─ README.md
-├─ tailwind.config.js    # Tailwind configuration
+├─ tailwind.config.js    # Tailwind configuration ```
 
 
 
