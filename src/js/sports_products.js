@@ -47,7 +47,7 @@ applyFilter.addEventListener("click", () => {
 
 async function fetchProducts() {
   try {
-    const response = await fetch('https://product-data-371b9-default-rtdb.firebaseio.com/men.json');
+    const response = await fetch('https://product-data-371b9-default-rtdb.firebaseio.com/sports.json');
     const data = await response.json();
 
     if (data) {
@@ -152,6 +152,7 @@ function renderPagination(products) {
   paginationContainer.appendChild(nextButton);
 }
 
+
 function renderProducts(products) {
   const productGrid = document.getElementById('productGrid');
 
@@ -170,21 +171,11 @@ function renderProducts(products) {
     `;
     
     productCard.onclick = () => {
-      window.location.href = `product_details.html?id=${product.id}&category=men`;
+      window.location.href = `product_details.html?id=${product.id}&category=sports`;
     };
 
     productGrid.appendChild(productCard);
   });
 }
-
-document.querySelectorAll('.category-box').forEach(box => {
-  box.addEventListener('click', (e) => {
-    const category = e.currentTarget.dataset.category; 
-    filteredProducts = category === 'all' ? allProducts : allProducts.filter(product => product.category === category);
-    currentPage = 1; 
-    renderProducts(paginateProducts(filteredProducts));
-    renderPagination(filteredProducts);
-  });
-});
 
 fetchProducts();
