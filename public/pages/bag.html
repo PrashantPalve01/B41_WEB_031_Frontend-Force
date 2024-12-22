@@ -3,24 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Detail Page</title>
+  <title>Bag Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../styles/home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
 
-  <style>
-    .height_box {
-      height: 550px;
-    }
-    .height_box img {
-      width: 90%;
-      height: 100%;
-    }
-    .hidden {
-      display: none;
-    }
-  </style>
 </head>
 <body>
 
@@ -28,7 +16,7 @@
     <nav>
         <div class="logoPageSection">
             <div class="logo">
-                <a href="../../index.html">
+                <a href="../index.html">
                     <img src="../images/logo.png" alt="Logo">
                 </a>
             </div>
@@ -59,44 +47,52 @@
 
   <div class="loginMsg mt-5"></div>
 
+  <!-- Success message -->
+  <div id="successMessage" style="color: white;" class="hidden right-4 bg-opacity-50 bg-green-500 text-white p-4 rounded-md shadow-lg lg:w-2/5 md:w-3/5 w-11/12">
+    <p class="text-md font-bold"><span class="text-3xk">✅</span> Your order has been successfully placed. You will be redirected shortly.</p>
+  </div>
+  
+
   <div class="container mx-auto p-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-      <!-- Product Image -->
-      <div class="flex justify-center border p-2 height_box">
-        <img src="https://via.placeholder.com/150" alt="Product Image" class="rounded-sm" id="productImage">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <h1 class="font-bold text-black text-3xl">YOUR SHOPPING BAG</h1>
+        <div>
+          <p class="mt-4">Total (<span id="totalItems">0</span> items)</p>
+          <table class="w-full table-auto border-collapse">
+            <thead class="text-left">
+              <tr class="border-b-2 border-gray-700">
+                <th class="p-3 font-semibold text-gray-600">Item</th>
+                <th class="p-3 font-semibold text-gray-600">Size</th>
+                <th class="p-3 font-semibold text-gray-600">Quantity</th>
+                <th class="p-3 font-semibold text-gray-600">Price</th>
+                <th class="p-3"></th>
+              </tr>
+            </thead>
+            <tbody id="bagItems">
+              <!-- Product rows will be added here dynamically -->
+            </tbody>
+          </table>
+        </div>
+        <a href="index.html" class="block mt-5 text-slate-900 underline">Continue Shopping</a>
       </div>
 
-      <!-- Product Details -->
-      <div class="flex flex-col justify-between">
-        <h1 class="text-3xl font-bold mb-2" id="productName"></h1>
-        <p class="text-gray-600 mb-1">Category: <span class="font-medium" id="productCategory"></span></p>
-        <p class="text-xl font-bold text-black mb-4" id="productPrice"></p>
-        <p class="text-gray-600 mb-4" id="productDescription"></p>
-
-        <!-- Color Section -->
-        <div class="mb-4" id="colorSection">
-          <h3 class="font-medium text-gray-700 mb-2"><span id="colorName">Select Color:</span></h3>
-          <div class="flex gap-2 selectColor" id="colorOptions"></div>
-        </div>
-
-        <!-- Size Section -->
-        <div class="mb-4" id="sizeSection">
-          <h3 class="font-medium text-gray-700 mb-2"><span id="sizeName">Select Size:</span></h3>
-          <div class="grid selectSize grid-cols-6 gap-2" id="sizeOptions"></div>
-        </div>
-
-        <p class="text-gray-600 mb-4" id="productDetails"></p>
-        <p id="errorMessage" class="text-red-500 mt-2 hidden">Please select a color and/or size!</p>
-
-        <button 
-          id="addToBag" 
-          class="w-full bg-black text-white font-medium py-3 cursor-pointer mt-4">
-          Add to Bag
-        </button>
-
-        <div class="mt-4">
-          <p>Estimated Delivery: 3-5 business days.</p>
-          <p id="productId"></p>
+      <div>
+        <div class="p-6 shadow-md text-white" style="background: rgb(36, 69, 150);">
+          <h1 class="text-xl font-bold mb-6">ORDER SUMMARY</h1>
+          <div class="flex justify-between text-md mb-2">
+            <p>SUBTOTAL</p>
+            <p id="subtotal">₹0.00</p>
+          </div>
+          <div class="flex justify-between text-md mb-6">
+            <p>DELIVERY</p>
+            <p>FREE</p>
+          </div>
+          <div class="flex justify-between text-md font-bold mb-6">
+            <p>TOTAL</p>
+            <p id="totalPrice">₹0.00</p>
+          </div>
+          <button id="orderBtn" class="w-full bg-white text-black border-slate-950 py-2 hover:bg-black hover:text-white">Proceed to Order</button>
         </div>
       </div>
     </div>
@@ -157,8 +153,9 @@
             ©2023 Reebok International Limited. All Rights Reserved.</p>
     </div>
   </footer>
+
 </body>
 </html>
 
-<script src="../js/productDetails.js"></script>
+<script src="../js/bag.js"></script>
 <script src="../js/index.js"></script>

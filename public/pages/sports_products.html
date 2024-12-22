@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Men's Products</title>
+  <title>Kid's Products</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../styles/home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
 
 </head>
 <body>
@@ -15,7 +16,7 @@
     <nav>
         <div class="logoPageSection">
             <div class="logo">
-                <a href="../../index.html">
+                <a href="../index.html">
                     <img src="../images/logo.png" alt="Logo">
                 </a>
             </div>
@@ -44,37 +45,21 @@
     </nav>
 </header>
 
+  <section class="banner">
+    <div>
+        <img src="https://www.reebok.eu/BWStaticContent/153000/5fcab860-73dd-47f9-9346-219902766c8f_desk-hedmayner.jpg" alt="">
+    </div>
+  </section>
   <section class="container w-11/12 md:w-4/5 mx-auto py-5">
     <div>
       <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold md:w-3/5">
-        MEN'S SHOES, CLOTHING & ACCESSORIES 
+        SPORT'S Reebok Official
         <span id="itemCount" class="text-gray-500 text-xl">[0 items]</span>
       </h1>
       <p class="text-black-600 mt-2">
-        Welcome to Reebok Men’s. Our selection of men’s clothing, accessories and trainers is ready for your every workout or chillout. You’ll find everything from classic shoes to our latest drops here.
+        Reebok’s comprehensive range of performance-based workout gear and sports shoes is ideal whatever your sport of choice is. Everything from our classic range to the latest models can be found here in a range of materials and colours - including classic white and black.
       </p>
     </div>
-    
-    <section class="container bg-gray-100 mx-auto p-6 mt-6">
-      <div class="flex space-x-6">
-        <div class="w-2/6 md:w-1/6 shadow-md p-2 cursor-pointer text-center category-box" data-category="all">
-          <img src="https://img.freepik.com/free-photo/travel-accessory-concept_1388-37.jpg?ga=GA1.1.876217049.1729766322&semt=ais_hybrid" alt="All" class="shadow-md w-full">
-          <a href="#" class="block mt-2 text-lg font-bold hover:underline">All</a>
-        </div>
-        <div class="w-2/6 md:w-1/6 shadow-md p-2 cursor-pointer text-center category-box" data-category="shoes">
-          <img src="https://www.reebok.eu/BWStaticContent/153000/a798e7d3-29a4-46bf-979a-3564d89d8167_23ss-men-fd-iwp-tile-shoes-dt.jpg" alt="Shoes" class="shadow-md w-full">
-          <a href="#" class="block mt-2 text-lg font-bold hover:underline">Shoes</a>
-        </div>
-        <div class="w-2/6 md:w-1/6 shadow-md p-2 cursor-pointer text-center category-box" data-category="clothes">
-          <img src="https://www.reebok.eu/BWStaticContent/153000/a1d018f3-69aa-490b-8fd9-0e426c4dfc31_23ss-men-fd-iwp-tile-apparel-dt.jpg" alt="" class="shadow-md w-full">
-          <a href="#" class="block mt-2 text-lg font-bold hover:underline">Clothing</a>
-        </div>
-        <div class="w-2/6 md:w-1/6 shadow-md p-2 cursor-pointer text-center category-box" data-category="accessories">
-          <img src="https://www.reebok.eu/BWStaticContent/153000/c8a0a775-86c6-4b71-a71b-4f8c6b3b31ff_23ss-men-fd-iwp-tile-acc-dt.jpg" alt="Accessories" class="shadow-md w-full">
-          <a href="#" class="block mt-2 text-lg font-bold hover:underline">Accessories</a>
-        </div>
-      </div>
-    </section>
 
     <section class="mt-10">
       <button id="refineButton" class="bg-white border border-black py-2 w-32 hover:bg-black hover:text-white text-lg flex items-center justify-around">Refine 
@@ -107,8 +92,7 @@
           <select name="category" class="block w-full">
             <option value="all">All</option>
             <option value="shoes">Shoes</option>
-            <option value="clothes">Clothes</option>
-            <option value="accessories">Accessories</option>
+            <option value="clothing">Clothes</option>
           </select>
         </label>
         <button class="px-4 mt-10 py-2 bg-black text-white w-full hover:bg-gray-700" id="applyFilter">Apply Filters</button>
@@ -175,5 +159,5 @@
 
 </body>
 </html>
-<script src="../js/men_products.js"></script>
+<script src="../js/sports_products.js"></script>
 <script src="../js/index.js"></script>
