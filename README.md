@@ -113,7 +113,10 @@ Database (fetching and storing product, cart, and order data).
 
 ## Screenshots
 
-## Screenshot
-
 ![Homepage Screenshot](public/images/homescreen.png)
 ![Women Product Page Screenshot](public/images/productscreen.png)
+![Product details Page Screenshot without user login](public/images/productDetailscreen.png)
+![Bag Page Screenshot without user login](public/images/bagscreen.png)
+![Login and Register Page Screenshot](public/images/bagscreen.png)
+![Product details Page Screenshot with user login](public/images/productDetailscreen1.png)
+![Bag Page Screenshot with user login](public/images/bagscreen1.png)
