@@ -3,41 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reebok</title>
+    <title>Reebok </title>
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="flex">
-        <input type="checkbox" id="check">
-        <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
-        <div class="links flex">
-            <label class="logo">
-                <img src="../images/logo.png" alt="">
-            </label>
-            <ul>
-                <li><a href="#"><b>WOMEN</b></a></li>
-                <li><a href="#"><b>MEN</b></a></li>
-                <li><a href="#"><b>KIDS</b></a></li>
-                <li><a href="#">CLASSICS</a></li>
-                <li><a href="#">SPORTS</a></li>
-                <li><a href="#"><b>REEBOK LTD</b></a></li>
-                <li><a href="#">STORIES</a></li>
-            </ul>
-        </div>
-        <div class="right flex">
-            <ul class="flex">
-                <li><a href="#">GB / £ EN</a></li>
-                <li><a href="#"><img src="../images/search.svg" alt=""></a></li>
-                <li><a href="#"><img src="../images/login.svg" alt=""></a></li>
-                <li><a href="#"><img src="../images/wishlist.svg" alt=""></a></li>
-                <li><a href="#"><img src="../images/bag.svg" alt=""></a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav>
+            <div class="logoPageSection">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="../images/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="menu-items menu">
+                    <ul>
+                        <li><a href="./women_product.html"><b>WOMEN</b></a></li>
+                        <li><a href="./men_products.html"><b>MEN</b></a></li>
+                        <li><a href="./kids_products.html"><b>KIDS</b></a></li>
+                        <li><a href="./classic_products.html"><b>CLASSICS</b></a></li>
+                        <li><a href="./sports_products.html"><b>SPORTS</b></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="profile-section">
+                <a href="#">GB / £ EN</a>
+                <a href="#"><img src="../images/search.svg" alt="Search"></a>
+                <div class="profile-menu">
+                    <a href="./sign-register.html" id="NavSignIn"><img src="../images/login.svg" id="profile-icon" alt="Profile"></a>
+                    <div class="dropdown" id="profile-dropdown">
+                        <!-- Content will be dynamically updated -->
+                    </div>
+                </div>
+                <a href="./bag.html"><img src="../images/bag.svg" alt="Bag"></a>
+            </div>
+        </nav>
+    </header>
+    
     <div class="banner">
         <video autoplay loop muted
          src="https://www.reebok.eu/BWStaticContent/153000/ac972311-eded-4c5c-a98d-6b0d26ef945d_brand-campaign.mp4#t=0.001"></video>
@@ -46,7 +49,7 @@
             <p>It’s not just about the game—it’s in the hustle, the grind, and 
                 <br>the everyday moments that push you forward. Sport is in 
                 <br>everything you do.</p>
-            <button>Shop Now</button>
+            <a href="./sports_products.html"><button class="btnBtn">Shop Now</button></a>
         </div>
     </div>
     <div class="row-scroll">
@@ -116,16 +119,22 @@
     </div>
     <div class="category">
         <div class="category-box">
-            <img src="https://www.reebok.eu/BWStaticContent/153000/55a08325-f114-4899-ba17-bef124087cc4_category-desk.jpg" alt="">
-            <div class="center-text">WOMEM</div>
+            <a href="./women_product.html">
+                <img src="https://www.reebok.eu/BWStaticContent/153000/55a08325-f114-4899-ba17-bef124087cc4_category-desk.jpg" alt="">
+                <div class="center-text">WOMEM</div>
+            </a>
         </div>
         <div class="category-box">
-            <img src="https://www.reebok.eu/BWStaticContent/153000/6802d433-922d-4022-9233-b91d5eda1892_category-desk.jpg" alt="">
-            <div class="center-text">MEN</div>
+            <a href="./men_products.html">
+                <img src="https://www.reebok.eu/BWStaticContent/153000/6802d433-922d-4022-9233-b91d5eda1892_category-desk.jpg" alt="">
+                <div class="center-text">MEN</div>
+            </a>
         </div>
         <div class="category-box">
-            <img src="https://www.reebok.eu/BWStaticContent/153000/cb0917ac-52f9-4a45-af6a-f5d4587c5d7e_category-desk.jpg" alt="">
-            <div class="center-text">KIDS</div>
+            <a href="./kids_products.html">
+                <img src="https://www.reebok.eu/BWStaticContent/153000/cb0917ac-52f9-4a45-af6a-f5d4587c5d7e_category-desk.jpg" alt="">
+                <div class="center-text">KIDS</div>
+            </a>
         </div>
     </div>
     <div class="featuring">
@@ -180,7 +189,7 @@
         <div class="side-text">
             <h1>REEBOK X OBEY</h1>
             <p>Innovated Classics</p>
-            <button>Shop Now</button>
+            <a href="./classic_products.html"><button class="btnBtn">Shop Now</button></a>
         </div>
     </div>
     <div class="row-scroll">
@@ -253,7 +262,7 @@
         <div class="side-text">
             <h1>REEBOK LTD</h1>
             <p>A playground for creative evolution.</p>
-            <button>Shop Now</button>
+            <a href="./sports_products.html"><button class="btnBtn">Shop Now</button></a>
         </div>
     </div>
     <div class="row-scroll">
@@ -359,3 +368,5 @@
 
 </body>
 </html>
+
+<script src="../js/index.js"></script>
