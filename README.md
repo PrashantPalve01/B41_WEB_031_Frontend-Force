@@ -41,7 +41,7 @@ Frontend:
 ├─ package-lock.json
 ├─ package.json
 ├─ README.md
-├─ tailwind.config.js    # Tailwind configuration ```
+├─ tailwind.config.js    # Tailwind configuration```
 
 
 
