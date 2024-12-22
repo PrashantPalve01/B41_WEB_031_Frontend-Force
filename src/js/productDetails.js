@@ -34,7 +34,6 @@ async function fetchProductDetails() {
     console.log("Fetching data from:", fetchUrl);
     const response = await fetch(fetchUrl);
     const data = await response.json();
-
     if (!data) {
       console.error("No data found for this category");
       return;
@@ -66,7 +65,6 @@ function renderProductDetails(product) {
   const sizeContainer = document.querySelector("#sizeSection");
   const errorMessage = document.getElementById("errorMessage");
 
-  // Handle color options
   if (product.colors && product.colors.length > 0) {
     const colorOptions = document.querySelector("#colorOptions");
     product.colors.forEach(color => {
@@ -80,7 +78,6 @@ function renderProductDetails(product) {
     colorContainer.classList.add("hidden");
   }
 
-  // Handle size options
   if (product.sizes && product.sizes.length > 0) {
     const sizeOptions = document.querySelector("#sizeOptions");
     product.sizes.forEach(size => {
@@ -95,7 +92,6 @@ function renderProductDetails(product) {
     sizeContainer.classList.add("hidden");
   }
 
-  // Add to Bag button logic
   addToBagButton.onclick = () => {
     const selectedColor = document.querySelector("#colorOptions button.selected");
     const selectedSize = document.querySelector("#sizeOptions button.selected");
@@ -141,6 +137,7 @@ function renderProductDetails(product) {
         window.location.href = "bag.html";
       } else {
         productBag[userId].push(productData);
+        alert("Item successfully added to your bag! Continue shopping 🛒 proceed to checkout.")
         window.location.href = "bag.html";
       }
 

@@ -52,6 +52,8 @@ async function fetchProducts() {
 
     if (data) {
       allProducts = Object.values(data);
+      const itemCount = document.getElementById('itemCount');
+      itemCount.textContent = `[${allProducts.length} items]`;
       filteredProducts = allProducts;
       renderProducts(paginateProducts(filteredProducts));
       renderPagination(filteredProducts);
@@ -77,7 +79,7 @@ function renderPagination(products) {
   const createButton = (text, isDisabled, onClick) => {
     const button = document.createElement('button');
     button.textContent = text;
-    button.className = `px-3 py-1 mx-1 border rounded-sm ${isDisabled ? 'cursor-not-allowed bg-gray-200 text-black' : 'hover:bg-black hover:text-white'}`;
+    button.className = `px-3 py-1 mx-1 border rounded-sm ${isDisabled ? 'cursor-not-allowed bg-gray-400 text-white' : 'hover:bg-black hover:text-white'}`;
     if (!isDisabled) {
       button.onclick = onClick;
     }
@@ -153,9 +155,6 @@ function renderPagination(products) {
 
 function renderProducts(products) {
   const productGrid = document.getElementById('productGrid');
-  const itemCount = document.getElementById('itemCount');
-  
-  itemCount.textContent = `[${products.length} items]`;
 
   productGrid.innerHTML = '';
 
