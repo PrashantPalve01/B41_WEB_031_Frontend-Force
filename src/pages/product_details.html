@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+
+  <style>
+    .height_box {
+      height: 550px;
+    }
+    .height_box img {
+      width: 90%;
+      height: 100%;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+        <div class="logoPageSection">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="../images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="menu-items menu">
+                <ul>
+                    <li><a href="./women_product.html"><b>WOMEN</b></a></li>
+                    <li><a href="./men_products.html"><b>MEN</b></a></li>
+                    <li><a href="./kids_products.html"><b>KIDS</b></a></li>
+                    <li><a href="./classic_products.html"><b>CLASSICS</b></a></li>
+                    <li><a href="./sports_products.html"><b>SPORTS</b></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="profile-section">
+            <a href="#">GB / £ EN</a>
+            <a href="#"><img src="../images/search.svg" alt="Search"></a>
+            <div class="profile-menu">
+                <a href="./sign-register.html" id="NavSignIn"><img src="../images/login.svg" id="profile-icon" alt="Profile"></a>
+                <div class="dropdown" id="profile-dropdown">
+                    <!-- Content will be dynamically updated -->
+                </div>
+            </div>
+            <a href="./bag.html"><img src="../images/bag.svg" alt="Bag"></a>
+        </div>
+    </nav>
+</header>
+
+  <div class="loginMsg mt-5"></div>
+
+  <div class="container mx-auto p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+      <!-- Product Image -->
+      <div class="flex justify-center border p-2 height_box">
+        <img src="https://via.placeholder.com/150" alt="Product Image" class="rounded-sm" id="productImage">
+      </div>
+
+      <!-- Product Details -->
+      <div class="flex flex-col justify-between">
+        <h1 class="text-3xl font-bold mb-2" id="productName"></h1>
+        <p class="text-gray-600 mb-1">Category: <span class="font-medium" id="productCategory"></span></p>
+        <p class="text-xl font-bold text-black mb-4" id="productPrice"></p>
+        <p class="text-gray-600 mb-4" id="productDescription"></p>
+
+        <!-- Color Section -->
+        <div class="mb-4" id="colorSection">
+          <h3 class="font-medium text-gray-700 mb-2"><span id="colorName">Select Color:</span></h3>
+          <div class="flex gap-2 selectColor" id="colorOptions"></div>
+        </div>
+
+        <!-- Size Section -->
+        <div class="mb-4" id="sizeSection">
+          <h3 class="font-medium text-gray-700 mb-2"><span id="sizeName">Select Size:</span></h3>
+          <div class="grid selectSize grid-cols-6 gap-2" id="sizeOptions"></div>
+        </div>
+
+        <p class="text-gray-600 mb-4" id="productDetails"></p>
+        <p id="errorMessage" class="text-red-500 mt-2 hidden">Please select a color and/or size!</p>
+
+        <button 
+          id="addToBag" 
+          class="w-full bg-black text-white font-medium py-3 cursor-pointer mt-4">
+          Add to Bag
+        </button>
+
+        <div class="mt-4">
+          <p>Estimated Delivery: 3-5 business days.</p>
+          <p id="productId"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-gray-200">
+    <div class="footer">
+        <div class="box">
+            <ul>
+                <li class="heading">SUPPORT</li>
+                <li class="li">Help</li>
+                <li class="li">Delivery</li>
+                <li class="li">Return your order</li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul>
+                <li class="heading">LEGAL</li>
+                <li class="li">Terms & Conditions</li>
+                <li class="li">Privacy Policy</li>
+                <li class="li">Cookie Policy</li>
+                <li class="li">Cookie Preferences</li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul>
+                <li class="heading">COUNTRY/CURRENCY
+                </li>
+                <li class="li">United Kingdom / £ Change</li>
+                <li style="margin-top:30px;" class="heading">PAYMETN METHODS</li>
+                <li>
+                    <div class="flex">
+                        <div>
+                            <img src="../images/americanexpress.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/bharatpay.jpeg" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/jcb.jpeg" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/maestro.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/mastercard.png" alt="">
+                        </div>
+                        <div>
+                            <img class="visa" src="../images/visa.png" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer2">
+        <p>Reebok™ is a trademark of Reebok International Limited. 
+            ©2023 Reebok International Limited. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+<script src="../js/productDetails.js"></script>
+<script src="../js/index.js"></script>

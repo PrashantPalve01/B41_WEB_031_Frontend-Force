@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In/Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/home.css">
+
+</head>
+<body>
+
+
+    <header>
+        <nav>
+            <div class="logoPageSection">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="../images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="menu-items menu">
+                    <ul>
+                        <li><a href="./women_product.html"><b>WOMEN</b></a></li>
+                        <li><a href="./men_products.html"><b>MEN</b></a></li>
+                        <li><a href="./kids_products.html"><b>KIDS</b></a></li>
+                        <li><a href="./classic_products.html"><b>CLASSICS</b></a></li>
+                        <li><a href="./sports_products.html"><b>SPORTS</b></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="profile-section">
+                <a href="#">GB / £ EN</a>
+                <a href="#"><img src="../images/search.svg" alt=""></a>
+                <a href="./sign-register.html"><img src="../images/login.svg" alt=""></a>
+                <a href="./bag.html"><img src="../images/bag.svg" alt=""></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mx-auto w-11/12 xl:w-4/5 flex flex-col lg:flex-row justify-between mt-5">
+        <!-- Mobile View Buttons -->
+        <div class="w-full flex justify-around lg:hidden mb-4">
+            <button id="showSignIn" class="px-4 py-2 hover:text-gray-500">SIGN IN</button>
+            <button id="showRegister" class="px-4 py-2 hover:text-gray-500">REGISTER</button>
+        </div>
+
+        <!-- Sign In Section -->
+        <div id="signIn" class="lg:w-5/12 lg:block">
+            <h1 class="text-2xl font-bold text-gray-800 mb-10">SIGN IN</h1>
+            <form id="signIn-form" class="space-y-10">
+                <div>
+                    <label for="sign-email" class="block text-sm text-gray-600 mb-1">Email Address</label>
+                    <input type="email" id="sign-email" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                </div>
+                <div>
+                    <label for="sign-password" class="block text-sm text-gray-600 mb-1">Password</label>
+                    <div class="relative">
+                        <input type="password" id="sign-password" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                        <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer" onclick="togglePassword('sign-password')">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0c0 5.523-4.477 10-10 10S1 17.523 1 12 5.477 2 11 2s10 4.477 10 10z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <button class="w-full bg-black text-white py-2 hover:bg-gray-800">Sign In</button>
+            </form>
+        </div>
+
+        <!-- Register Section -->
+        <div id="register" class="lg:w-5/12 lg:block hidden">
+            <h1 class="text-2xl font-bold text-gray-800 mb-10">REGISTER</h1>
+            <form id="register-form" class="space-y-8">
+                <div>
+                    <label for="reg-Fname" class="block text-sm text-gray-600 mb-1">First Name</label>
+                    <input type="text" id="reg-Fname" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                </div>
+                <div>
+                    <label for="reg-Lname" class="block text-sm text-gray-600 mb-1">Last Name</label>
+                    <input type="text" id="reg-Lname" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                </div>
+                <div>
+                    <label for="reg-email" class="block text-sm text-gray-600 mb-1">Email Address</label>
+                    <input type="email" id="reg-email" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                </div>
+                <div>
+                    <label for="reg-password" class="block text-sm text-gray-600 mb-1">Password</label>
+                    <div class="relative">
+                        <input type="password" id="reg-password" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-200" required>
+                        <span class="absolute inset-y-0 right-3 flex items-center cursor-pointer" onclick="togglePassword('reg-password')">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0c0 5.523-4.477 10-10 10S1 17.523 1 12 5.477 2 11 2s10 4.477 10 10z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <button class="w-full bg-black text-white py-2 hover:bg-gray-800">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-gray-200 mt-10">
+        <div class="footer">
+            <div class="box">
+                <ul>
+                    <li class="heading">SUPPORT</li>
+                    <li class="li">Help</li>
+                    <li class="li">Delivery</li>
+                    <li class="li">Return your order</li>
+                </ul>
+            </div>
+            <div class="box">
+                <ul>
+                    <li class="heading">LEGAL</li>
+                    <li class="li">Terms & Conditions</li>
+                    <li class="li">Privacy Policy</li>
+                    <li class="li">Cookie Policy</li>
+                    <li class="li">Cookie Preferences</li>
+                </ul>
+            </div>
+            <div class="box">
+                <ul>
+                    <li class="heading">COUNTRY/CURRENCY
+                    </li>
+                    <li class="li">United Kingdom / £ Change</li>
+                    <li style="margin-top:30px;" class="heading">PAYMETN METHODS</li>
+                    <li>
+                        <div class="flex">
+                            <div>
+                                <img src="../images/americanexpress.png" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/bharatpay.jpeg" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/jcb.jpeg" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/maestro.png" alt="">
+                            </div>
+                            <div>
+                                <img src="../images/mastercard.png" alt="">
+                            </div>
+                            <div>
+                                <img class="visa" src="../images/visa.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer2">
+            <p>Reebok™ is a trademark of Reebok International Limited. 
+                ©2023 Reebok International Limited. All Rights Reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
+
+<script src="../js/sign-register.js"></script>

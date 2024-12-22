@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bag Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+
+</head>
+<body>
+
+  <header>
+    <nav>
+        <div class="logoPageSection">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="../images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="menu-items menu">
+                <ul>
+                    <li><a href="./women_product.html"><b>WOMEN</b></a></li>
+                    <li><a href="./men_products.html"><b>MEN</b></a></li>
+                    <li><a href="./kids_products.html"><b>KIDS</b></a></li>
+                    <li><a href="./classic_products.html"><b>CLASSICS</b></a></li>
+                    <li><a href="./sports_products.html"><b>SPORTS</b></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="profile-section">
+            <a href="#">GB / £ EN</a>
+            <a href="#"><img src="../images/search.svg" alt="Search"></a>
+            <div class="profile-menu">
+                <a href="./sign-register.html" id="NavSignIn"><img src="../images/login.svg" id="profile-icon" alt="Profile"></a>
+                <div class="dropdown" id="profile-dropdown">
+                    <!-- Content will be dynamically updated -->
+                </div>
+            </div>
+            <a href="./bag.html"><img src="../images/bag.svg" alt="Bag"></a>
+        </div>
+    </nav>
+</header>
+
+  <div class="loginMsg mt-5"></div>
+
+  <!-- Success message -->
+  <div id="successMessage" style="color: white;" class="hidden right-4 bg-opacity-50 bg-green-500 text-white p-4 rounded-md shadow-lg lg:w-2/5 md:w-3/5 w-11/12">
+    <p class="text-md font-bold"><span class="text-3xk">✅</span> Your order has been successfully placed. You will be redirected shortly.</p>
+  </div>
+  
+
+  <div class="container mx-auto p-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <h1 class="font-bold text-black text-3xl">YOUR SHOPPING BAG</h1>
+        <div>
+          <p class="mt-4">Total (<span id="totalItems">0</span> items)</p>
+          <table class="w-full table-auto border-collapse">
+            <thead class="text-left">
+              <tr class="border-b-2 border-gray-700">
+                <th class="p-3 font-semibold text-gray-600">Item</th>
+                <th class="p-3 font-semibold text-gray-600">Size</th>
+                <th class="p-3 font-semibold text-gray-600">Quantity</th>
+                <th class="p-3 font-semibold text-gray-600">Price</th>
+                <th class="p-3"></th>
+              </tr>
+            </thead>
+            <tbody id="bagItems">
+              <!-- Product rows will be added here dynamically -->
+            </tbody>
+          </table>
+        </div>
+        <a href="index.html" class="block mt-5 text-slate-900 underline">Continue Shopping</a>
+      </div>
+
+      <div>
+        <div class="p-6 shadow-md text-white" style="background: rgb(36, 69, 150);">
+          <h1 class="text-xl font-bold mb-6">ORDER SUMMARY</h1>
+          <div class="flex justify-between text-md mb-2">
+            <p>SUBTOTAL</p>
+            <p id="subtotal">₹0.00</p>
+          </div>
+          <div class="flex justify-between text-md mb-6">
+            <p>DELIVERY</p>
+            <p>FREE</p>
+          </div>
+          <div class="flex justify-between text-md font-bold mb-6">
+            <p>TOTAL</p>
+            <p id="totalPrice">₹0.00</p>
+          </div>
+          <button id="orderBtn" class="w-full bg-white text-black border-slate-950 py-2 hover:bg-black hover:text-white">Proceed to Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-gray-200">
+    <div class="footer">
+        <div class="box">
+            <ul>
+                <li class="heading">SUPPORT</li>
+                <li class="li">Help</li>
+                <li class="li">Delivery</li>
+                <li class="li">Return your order</li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul>
+                <li class="heading">LEGAL</li>
+                <li class="li">Terms & Conditions</li>
+                <li class="li">Privacy Policy</li>
+                <li class="li">Cookie Policy</li>
+                <li class="li">Cookie Preferences</li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul>
+                <li class="heading">COUNTRY/CURRENCY
+                </li>
+                <li class="li">United Kingdom / £ Change</li>
+                <li style="margin-top:30px;" class="heading">PAYMETN METHODS</li>
+                <li>
+                    <div class="flex">
+                        <div>
+                            <img src="../images/americanexpress.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/bharatpay.jpeg" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/jcb.jpeg" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/maestro.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../images/mastercard.png" alt="">
+                        </div>
+                        <div>
+                            <img class="visa" src="../images/visa.png" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer2">
+        <p>Reebok™ is a trademark of Reebok International Limited. 
+            ©2023 Reebok International Limited. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+<script src="../js/bag.js"></script>
+<script src="../js/index.js"></script>
