@@ -158,6 +158,6 @@ document.getElementById("orderBtn").addEventListener("click", function() {
 
   setTimeout(function() {
     successMessage.classList.add("hidden");
-    window.location.href = "index.html"; 
+    window.location.href = "../index.html"; 
   }, 3000); 
 });
