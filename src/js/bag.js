@@ -1,4 +1,5 @@
 const currentUser = sessionStorage.getItem('currentUser');
+const loginMsg = document.querySelector('.loginMsg');
 
 if (currentUser) {
   const productBag = JSON.parse(localStorage.getItem('productBag')) || {};
@@ -23,7 +24,7 @@ if (currentUser) {
         </p>
         <button class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800" onclick="redirectToLogin()">Login</button>
     `;
-    document.body.prepend(banner);
+    loginMsg.append(banner);
 
     document.querySelector('.container').innerHTML = `
         <h1 class="text-5xl font-serif font-bold">Your bag is empty.</h1> 

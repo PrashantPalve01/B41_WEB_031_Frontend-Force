@@ -4,6 +4,7 @@ const category = urlParams.get('category');
 
 const currentUser = sessionStorage.getItem('currentUser');
 const addToBagButton = document.getElementById('addToBag');
+const loginMsg = document.querySelector('.loginMsg');
 if (!currentUser) {
   const banner = document.createElement('div');
   banner.className = 'flex justify-between items-center px-6 py-2 bg-gray-100';
@@ -13,7 +14,7 @@ if (!currentUser) {
     </p>
     <button class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800" onclick="redirectToLogin()">Login</button>
   `;
-  document.body.prepend(banner);
+  loginMsg.append(banner);
 
   addToBagButton.disabled = true;
   addToBagButton.classList.add('cursor-not-allowed', 'opacity-50');

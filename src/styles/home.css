@@ -5,123 +5,184 @@
     font-family: sans-serif;
 }
 
-.flex {
-    display: flex;
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 10000;
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 6px 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.logo img {
+
+.logoPageSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img{
+    height: 50px;
     width: 100px;
-    height: 60px;
-    margin-left: 70px;
 }
-li {
+
+.menu ul {
+    display: flex;
+    gap: 20px;
     list-style: none;
 }
-a {
+
+.menu a {
     text-decoration: none;
-}
-.links ul li {
-    display: inline-block;
-}
-.links a {
-    line-height: 70px;
-    margin-left: 30px;
-    transition: 0.2s;
+    color: #333;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
-.links a:hover {
-    color: red;
-    font-size: 20px;
+
+.menu a:hover {
+    color: #ee3232;
 }
-.right a {
-    line-height: 70px;
-    margin-right: 20px;
-    transition: 0.2s;
-    font-weight: 500;
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
-.right a:hover {
-    color: red;
-    font-size: 20px;
+
+.menu-items {
+    display: flex;
 }
-.right a img {
-    margin-top: 20px;
+
+.menu-items a {
+    padding: 10px 15px;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+
+.profile-section a {
+    text-decoration: none;
+    color: #242424;
+    transition: color 0.3s ease;
+    font-weight:530;
+}
+.profile-section a img,.profile-menu img {
     width: 30px;
     height: 30px;
-    transition: 0.2s;
 }
-.right a img:hover {
-    width: 35px;
-    height: 35px;
+
+.profile-section a:hover{
+    color: gray;
 }
-#checkbtn {
-    float: right;
-    line-height: 70px;
-    margin-left: 10px;
-    font-size: 25px;
+
+
+
+
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
     display: none;
-}
-#check {
-    display: none;
-}
-#check:checked ~ .links ul {
-    left: 0;
-}
-
-nav li {
-    list-style: none;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-}
-
-/* .mega-box {
     position: absolute;
-    top: 10px;
-    width: 100%;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    top: 40px;
+    left: -70px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
 }
 
-.nav-links li:hover {
-    /* color: red; */
-    /* font-size: 18px;
-} */
-
-
-/* .nav-links li:hover .mega-box {
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease;
+.dropdown p {
+    margin: 0;
+    font-weight: bold;
 }
 
-.mega-box .content {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 25px 0px;
+.dropdown button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .logoPageSection {
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+
+    .logo {
+        margin-left: 80px;
+        flex: 1;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    .menu-items ul {
+        list-style: none;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .menu-items ul li {
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-items ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .profile-section {
+        width: 50%;
+        right: 0;
+        position: absolute;
+        justify-content: space-evenly;
+    }
+    .dropdown{
+        left: -110px;
+    }
 }
 
-.mega-box .row {
-    background: white;
-    margin-right: 20px;
-} */ */
-
-.btn img {
-    width: 25px;
-}
 
 video {
     width: 100%;
@@ -142,7 +203,6 @@ video {
 h1 {
     font-family: Archivo;
     font-size: 40px;
-    color: white;
 }
 
 .side-text p {
@@ -152,7 +212,7 @@ h1 {
     line-height: 25px;
 }
 
-button {
+.btnBtn {
     margin-top: 20px;
     padding: 10px;
     width: 110px;
@@ -160,9 +220,10 @@ button {
     border: 1px solid black;
     font-weight: 500;
     font-size: 15px;
+    cursor: pointer;
 }
 
-button:hover {
+.btnBtn:hover {
     color: white;
     background-color: black;
 }
@@ -175,7 +236,6 @@ h2 {
     font-size: 30px;
     font-family: Archivo;
 }
-
 .media-scroller {
     margin-top: 30px;
     display: grid;
@@ -212,6 +272,9 @@ h2 {
 .category-box {
     position: relative;
     text-align: center;
+}
+.category-box:hover .center-text{
+    text-decoration: underline;
 }
 
 .category-box img {
@@ -257,11 +320,6 @@ h2 {
     margin-top: 10px;
     color: var(--bg-grey);
 }
-
-img {
-    width: 100%;
-}
-
 footer {
     width: 100%;
     background-color: var(--bg-main);
@@ -344,7 +402,7 @@ footer .flex img {
         line-height: 20px;
     }
     
-    button {
+    .btnBtn {
         font-size: 13px;
     }
     
@@ -379,7 +437,7 @@ footer .flex img {
         line-height: 15px;
     }
     
-    button {
+    .btnBtn {
         font-size: 11px;
     }
     
@@ -419,7 +477,7 @@ footer .flex img {
         line-height: 13px;
     }
     
-    button {
+    .btnBtn {
         margin-top: 10px;
         padding: 11px;
         width: 90px;
@@ -447,12 +505,10 @@ footer .flex img {
 
     .feature-box img {
         width: 100%;
-        /* height: 80%; */
     }
 
     .feature-box h4 {
         margin-top: 10px;
-        /* font-size: 15px; */
     }
 
     .feature-box p {
@@ -494,7 +550,7 @@ footer .flex img {
         line-height: 10px;
     }
     
-    button {
+    .btnBtn {
         margin-top: 7px;
         padding: 10px;
         width: 90px;
@@ -520,7 +576,6 @@ footer .flex img {
 
     .feature-box h4 {
         margin-top: 10px;
-        /* font-size: 12px; */
     }
 
     .feature-box p {
@@ -586,7 +641,7 @@ footer .flex img {
         font-size: 7px;
     }
 
-    button {
+    .btnBtn {
         margin-top: 5px;
         padding: 7px;
         width: 60px;
@@ -645,22 +700,7 @@ footer .flex img {
 }
 
 
-@media screen and (max-width: 1150px) {
-    /* .links ul {
-        display: none; */
-    #checkbtn {
-        display: block;
-    }
-    .links ul {
-        width: 100%;
-        height: 100vh;
-        background-color: white;
-        position: fixed;
-        top: 70px;
-        left: -100%;
-    }
-    .links ul li {
-        display: block;
-        text-align: center;
-    }
+#successMessage{
+    position: fixed;
+    margin-top: -18px;
 }

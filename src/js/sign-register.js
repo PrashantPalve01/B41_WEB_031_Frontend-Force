@@ -133,3 +133,7 @@ function signIn(event) {
         .catch((err) => console.error("Error:", err));
 }
 
+function toggleMenu() {
+    const menu = document.querySelector('.menu-items');
+    menu.classList.toggle('active');
+}

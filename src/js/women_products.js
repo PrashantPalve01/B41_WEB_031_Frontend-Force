@@ -189,3 +189,4 @@ document.querySelectorAll('.category-box').forEach(box => {
 });
 
 fetchProducts();
+
